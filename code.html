@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Construction Project Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f28c26",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(242, 140, 38, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-primary/20">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img class="w-full h-full object-cover" data-alt="Professional male construction manager portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCudYV79yLwrar8XVOVd-anMdIeXmupk3ToomqXsVgNTL6WwyrptX2b5WEf4cbe0xe7sjJR6yLUzNoN_qteBoLswt3IG0NQJY_CCRQ76Nnp5o_8gpFfWdUW-2qI2XzNUe1Dlf_vr9UPHuvUNQpObtigF6JPgRpICSOlJP6OFxuCnc-sdrf0i56Qdgv4G8VGIEAN7Kz6dY27Mp5yN7yO0b-W9XOkx8uYk7BSDUAgAhDY7QuPcrKuuSDQz3Vywsm_-BySCGnStJWco6Q"/>
+</div>
+<div>
+<h1 class="text-sm font-bold leading-tight">Alex Thompson</h1>
+<p class="text-xs text-slate-500 dark:text-primary/70">Project Director</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto custom-scroll">
+<div class="p-4">
+<div class="mb-6">
+<h2 class="text-xl font-bold mb-1">Project Insights</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Overview for March 2024</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-primary/10 border border-slate-100 dark:border-primary/20 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full">+2%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Projects</p>
+<p class="text-2xl font-bold">12</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-primary/10 border border-slate-100 dark:border-primary/20 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary">checklist</span>
+<span class="text-rose-500 text-xs font-bold bg-rose-500/10 px-2 py-0.5 rounded-full">-5%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pending Tasks</p>
+<p class="text-2xl font-bold">45</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-primary/10 border border-slate-100 dark:border-primary/20 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary">warning</span>
+<span class="text-rose-500 text-xs font-bold bg-rose-500/10 px-2 py-0.5 rounded-full">3 High</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Site Alerts</p>
+<p class="text-2xl font-bold">8</p>
+</div>
+</div>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Recent Projects</h2>
+<button class="text-primary text-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="flex flex-col gap-3 pb-24">
+<div class="flex flex-col gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-slate-100 dark:border-primary/10 shadow-sm">
+<div class="flex gap-4">
+<div class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-slate-200 dark:border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Modern luxury villa construction site under blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1UB910uK04aafvBm0QH23vqhDz8smbrXt49OINsENC_52rp5OpGTfE62Q-u5xa72whsKZ7eKco5B1oEdT-Bx51WZDDU7zPDM4N0x2F9k-hCNHYl5Q4yDDzdZpeNw92B05_oxMhrPpy9jmBnR0HzD2lfuAI1dyduUds0d49sLR2AtSx6-WhAVS0LjgR0j8xh9GciiGYXMCpEnE5d2rAP9nGcJ9GTfMR7t2zBl9wdqiNSFvUicjqg03ic-GaHiz5XYlFuMdxj_hidE"/>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<h3 class="text-base font-bold truncate">Luxury Villa</h3>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">location_on</span>
+<p class="text-xs truncate">Malibu, California</p>
+</div>
+<p class="text-xs font-medium text-primary mt-1">Foundation Stage</p>
+</div>
+<div class="flex flex-col items-end justify-center">
+<p class="text-lg font-bold text-primary">65%</p>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Complete</p>
+</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-primary/20 rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full transition-all duration-500" style="width: 65%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-slate-100 dark:border-primary/10 shadow-sm">
+<div class="flex gap-4">
+<div class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-slate-200 dark:border-primary/20">
+<img class="w-full h-full object-cover" data-alt="High-rise corporate office building exterior with glass facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGqv_Zc80577kbkb1MJhc2t-GVJ4zphBpVNUWAv9c5tqYwUyRJbvZzGCvz0CUKuMQFBO-hSEQBt0EMEPayG76-9UbUHfQIpoAQ18JaRF6sIxjc8GRBP6l-v43h1BXL8Lf5_t6dnyGGhf4-51dpXtdzd_bHWrifOeh_86UUwIPEupIZSCPqmn_VYFb-4Sfv816UlxgVhAu__A_FMNHeiTeLJcfcq8hQukmw_EGuzjkNYfOW6JrwH2mON0Q6AO_A1VtgiozlEaH-XJw"/>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<h3 class="text-base font-bold truncate">Oakwood Heights</h3>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">location_on</span>
+<p class="text-xs truncate">Austin, Texas</p>
+</div>
+<p class="text-xs font-medium text-primary mt-1">Interior Finishing</p>
+</div>
+<div class="flex flex-col items-end justify-center">
+<p class="text-lg font-bold text-primary">88%</p>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Complete</p>
+</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-primary/20 rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full transition-all duration-500" style="width: 88%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-slate-100 dark:border-primary/10 shadow-sm">
+<div class="flex gap-4">
+<div class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-slate-200 dark:border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Modern retail shopping center construction with steel beams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd-BPk-aQ6QG7YVgMt0R_IMaYNEU2b59rBrg0vU31LuQxw2iT2jhKGLXgwOBUlIH6_Nk9UK-pgDwCIpNxsuZKWhAYLPTQ2BJVYkytX83i-Sq1iepObB9_Qub91XAGH3anBH5SA0pZZ0wdb0Gbv8WNuITgg9WJuWCQ-vxWZsbY0B9G9EQhieXHfyHqA7XigbxkbF3uEqZz8lVg9-_ti_J6l2BSRJZnTsUZUgoyVIruECGPAj1YHpbl0Nm59fuPRFHBU4ayhwKqJLhY"/>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<h3 class="text-base font-bold truncate">City Mall Expansion</h3>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">location_on</span>
+<p class="text-xs truncate">Chicago, Illinois</p>
+</div>
+<p class="text-xs font-medium text-primary mt-1">Structural Steel</p>
+</div>
+<div class="flex flex-col items-end justify-center">
+<p class="text-lg font-bold text-primary">32%</p>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Complete</p>
+</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-primary/20 rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full transition-all duration-500" style="width: 32%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-slate-100 dark:border-primary/10 shadow-sm">
+<div class="flex gap-4">
+<div class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-slate-200 dark:border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Large scale industrial warehouse construction project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIGuZuBQZCe09MddkYjWE9zQdplMJD4MDvSIVyv0vPDV1iiOV2hqmY6OI8VPpsQFoBzlMh1N6oseQb3zqmxx4wnDt0zcREJZS14AwKJIEZXlFn804KlyXmSWJObZ4JUSRrmHbbT-qtjsS2oJdHR9ofS5ac2i4mT8h5Gwg3z7ZouEGSUoSbdaVVRmKgyO-oXUboguGgDmgN0Yt5eWDsUmXEUehW5GQd22UBIH7MC8ssZgoq29gR1OMoCmCHCmCGIQZIL_ElKVlyRkQ"/>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<h3 class="text-base font-bold truncate">Metro Logistics Hub</h3>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xs">location_on</span>
+<p class="text-xs truncate">Denver, Colorado</p>
+</div>
+<p class="text-xs font-medium text-rose-500 mt-1">Delayed - Inspection</p>
+</div>
+<div class="flex flex-col items-end justify-center">
+<p class="text-lg font-bold text-primary">15%</p>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Complete</p>
+</div>
+</div>
+<div class="w-full bg-slate-100 dark:bg-primary/20 rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full transition-all duration-500" style="width: 15%;"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-primary/20 px-2 pb-6 pt-2 z-20">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-[1]">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Tasks</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Alerts</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>
