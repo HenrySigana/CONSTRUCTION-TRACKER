@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Construction Daily Progress Log</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f28c26",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4">
+<div class="flex items-center justify-between max-w-2xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">construction</span>
+<h1 class="text-xl font-bold tracking-tight">Daily Progress</h1>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined">add</span>
+<span>Add Log</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full p-4 space-y-6 pb-24">
+<!-- Date Selector Component -->
+<section class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 border border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 hover:bg-primary/20 rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="text-center">
+<p class="text-sm font-medium text-primary uppercase tracking-wider">October 2023</p>
+<p class="text-lg font-bold">Thursday, 5th</p>
+</div>
+<button class="p-2 hover:bg-primary/20 rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<span class="text-[10px] font-bold opacity-50 mb-2">S</span>
+<span class="text-[10px] font-bold opacity-50 mb-2">M</span>
+<span class="text-[10px] font-bold opacity-50 mb-2">T</span>
+<span class="text-[10px] font-bold opacity-50 mb-2">W</span>
+<span class="text-[10px] font-bold opacity-50 mb-2">T</span>
+<span class="text-[10px] font-bold opacity-50 mb-2">F</span>
+<span class="text-[10px] font-bold opacity-50 mb-2">S</span>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm hover:bg-primary/20">1</button>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm hover:bg-primary/20">2</button>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm hover:bg-primary/20">3</button>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm hover:bg-primary/20">4</button>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm bg-primary text-background-dark font-bold">5</button>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm hover:bg-primary/20">6</button>
+<button class="h-10 flex items-center justify-center rounded-lg text-sm hover:bg-primary/20">7</button>
+</div>
+</section>
+<!-- Summary Bar -->
+<div class="flex items-center justify-between px-1">
+<h2 class="text-lg font-bold">Activity Feed</h2>
+<div class="flex items-center gap-2 text-sm text-primary">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<span>Filters</span>
+</div>
+</div>
+<!-- Log List -->
+<div class="space-y-4">
+<!-- Log Entry 1 -->
+<div class="bg-background-light dark:bg-primary/5 border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-500/20 text-green-600 dark:text-green-400 mb-1">
+<span class="size-1.5 rounded-full bg-green-500 mr-1.5"></span>
+                                COMPLETED
+                            </span>
+<h3 class="font-bold text-lg">Concrete Pouring - Foundation B</h3>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-sm">
+<span class="material-symbols-outlined text-base">sunny</span>
+<span>24°C</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                        Foundation work for Block B successfully completed. Approximately 45 cubic meters of Grade 30 concrete poured. Inspection passed by onsite engineer.
+                    </p>
+<!-- Site Photo Thumbnails -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<div class="shrink-0 size-20 rounded-lg bg-cover bg-center border border-primary/20" data-alt="Wet concrete being poured into foundation forms" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFQU01e-qhfRmd3-Z25U_43D5bthEkaOWVDE74_zkZOl_3jTxM-P7CZq2DuaPm_cWG9myNnT-T27zzypZFzFMGnqC7VexeMH786BULSMdbCf1NRIjYI_qSUM_bup8A4R4-C8zpupgy0Gd5xrPXGOsi11DmbjA6Kumrnwov09Njt9EQBXBYqKgCYItsj10vjsWRxh3FbGrwOO9N7-jstEhJe98hSlaljkTSc7SSqyihYiTdWbnS9e2_lHxVqGKK6no3RLKSpVKtauI')">
+</div>
+<div class="shrink-0 size-20 rounded-lg bg-cover bg-center border border-primary/20" data-alt="Construction worker smoothing out wet concrete surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGG4sYpOGx0nE7ZMMiJ3cs3lyV-VYAaqMDI21Pd30mJRvgAGsV1IzPtsK4abRK6CfYOxliS1G1o3ElHoqu7_avZomJxbyKryxlMQ3daBedPvqzlkgf9SLmQxlotNJtOlG4xU4RL1N6Dyd4MPuvvnPgkKk4o0i_EkVwymOop90geTEMhT7G645B4m6mLBErJemm4Rt--9hKksmu-FzJm08mxQkNCwcXyvPh7XiwpH1KcgOCtrXEteMB5B1Yg8CYLTcE1nIyw0j0yZo')">
+</div>
+<div class="shrink-0 size-20 rounded-lg bg-cover bg-center border border-primary/20" data-alt="Aerial view of construction site foundation block" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2O1XLvOBYCqa7_iJXg1jKT-eNkS1maHAoU46kCDfaf4noot3a81fr1fOvs7NzrXEj9gdBMEmjGzDFkdYma5lCPVH1BzMeTk6w_mIjvWmb8gEs8-3ZlRVHVutPiGCrlvFP7H3km6z_kU9crE7krdlTM0rIjsBKW9cd8nlDn2-wkMIXZsDwD-GHbVgYcIfI_jyU6BPAhSElFkqxAU1uXIugUGa22Q6bGV9h8uNzUJcqq8Sx1SXiOk95mU_8b1bdKJcehoteyC-c-fA')">
+</div>
+<button class="shrink-0 size-20 rounded-lg bg-primary/10 flex flex-col items-center justify-center text-primary border border-dashed border-primary/40">
+<span class="material-symbols-outlined">add_a_photo</span>
+</button>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 px-4 py-2 flex justify-between items-center border-t border-primary/10">
+<span class="text-xs font-medium opacity-60">Log ID: #CON-9821</span>
+<button class="text-xs font-bold text-primary flex items-center gap-1">
+                        VIEW DETAILS <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Log Entry 2 -->
+<div class="bg-background-light dark:bg-primary/5 border border-primary/10 rounded-xl overflow-hidden shadow-sm opacity-90">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-primary/20 text-primary mb-1">
+<span class="size-1.5 rounded-full bg-primary mr-1.5"></span>
+                                IN PROGRESS
+                            </span>
+<h3 class="font-bold text-lg">Steel Rebar Installation</h3>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-sm">
+<span class="material-symbols-outlined text-base">cloud</span>
+<span>21°C</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                        Installation of vertical reinforcement bars for Level 1 pillars. Delivery delayed by 2 hours due to traffic.
+                    </p>
+<div class="flex gap-2 overflow-x-auto pb-2">
+<div class="shrink-0 size-20 rounded-lg bg-cover bg-center border border-primary/20" data-alt="Bundles of steel rebar on construction site" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBR743phx2lYTMygiRCFeJhzTy5o6Mvfa1KW7fk4q2H4OD6YwfV6VgZnls2WdNvfw7ghuZTDdOCHq0k1rw9V3ag0TWNGa1b6i7IM4iDjBkaxd5LlklnK7GI9fKklmSsLco5peHOY36i2OIlz9z1GO_Ii_tROInNOpbcBJ3PcIza7Us6g27FTcvj15jJHYfXv2rfJx__ByZiVxY_ukr5RkhibQd1iFR8vKRFfgZLFMFgCPbkJlwt707uN5-V2Pg9HZbA-bR1jfWRuw')">
+</div>
+<button class="shrink-0 size-20 rounded-lg bg-primary/10 flex flex-col items-center justify-center text-primary border border-dashed border-primary/40">
+<span class="material-symbols-outlined">add_a_photo</span>
+</button>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 px-4 py-2 flex justify-between items-center border-t border-primary/10">
+<span class="text-xs font-medium opacity-60">Log ID: #CON-9819</span>
+<button class="text-xs font-bold text-primary flex items-center gap-1">
+                        VIEW DETAILS <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-primary/20 px-6 pb-6 pt-2 z-20">
+<div class="max-w-2xl mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">format_list_bulleted</span>
+<span class="text-[10px] font-bold">Logs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="text-[10px] font-bold">Photos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
